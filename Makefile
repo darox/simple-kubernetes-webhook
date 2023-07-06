@@ -41,7 +41,7 @@ delete-config:
 	kubectl delete -f dev/manifests/cluster-config/
 
 .PHONY: deploy
-deploy: push delete deploy-config
+deploy: deploy-config
 	@echo "\n🚀 Deploying simple-kubernetes-webhook..."
 	kubectl apply -f dev/manifests/webhook/
 
